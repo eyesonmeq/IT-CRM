@@ -10,7 +10,7 @@ def sharedManifest = manifest {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-tasks.withType(Compile) {
+tasks.withType(JavaCompile) {
     options.fork(memoryMaximumSize: '1024m')
 }
 

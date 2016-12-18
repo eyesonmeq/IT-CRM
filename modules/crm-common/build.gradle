@@ -6,11 +6,11 @@ jar {
 }
 
 dependencies {
-    compile('com.google.guava:guava:${versions.guava}',
-			'joda-time:joda-time:${versions.joda-time}',
-			'commons-logging:commons-logging:${versions.commons-logging}',
-			'log4j:log4j:${versions.log4j}'
-    testCompile('junit:junit:${versions.junit}',
-				'org.hamcrest:java-hamcrest:${versions.hamcrest}',
-				'org.mockito:mockito-core:${versions.mockito}')
+    compile("com.google.guava:guava:$project.versions.guava",
+			"joda-time:joda-time:$project.versions.joda",
+			"commons-logging:commons-logging:$project.versions.logging",
+			"log4j:log4j:$project.versions.log4j")
+    testCompile("junit:junit:$project.versions.junit",
+				"org.hamcrest:java-hamcrest:$project.versions.hamcrest",
+				"org.mockito:mockito-core:$project.versions.mockito")
 }

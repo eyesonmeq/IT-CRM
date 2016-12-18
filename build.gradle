@@ -1,13 +1,10 @@
 allprojects {
-
-	group = "com.angel.it.crm"
-	version = "1.0.0";
-	buildNumber = new Date().format("yyyyMMdd.HHmmss")
+	apply plugin: 'maven'
 	
 	repositories {
         mavenCentral()
-        mavenRepo urls: 'http://repo.enonic.com/maven'
-        mavenRepo urls: 'http://repository.jboss.org/nexus/content/groups/public'
+        maven {url 'http://repo.enonic.com/maven'}
+        maven {url 'http://repository.jboss.org/nexus/content/groups/public'}
     }
 	
 	tasks.withType(JavaCompile) {
@@ -19,24 +16,25 @@ allprojects {
 def gradleDir = "$rootDir/gradle"
 apply from: "$gradleDir/wrapper.gradle"
 
-versions = [
- 	guava : '20.0',
-	joda-time : '2.9.6',
-	junit : '4.12',
-	hamcrest : '2.0.0.0',
-	mockito : '2.3.5',
- 	servlet : '3.0.1',
- 	spring : '4.3.4.RELEASE',
- 	mybatis : '3.4.1',
-	mybatis-spring : '1.3.0',
-	mysql : '5.1.40',
-	commons-dbcp : '1.4',
-	commons-logging : '1.2',
- 	log4j : '1.2.17'
+def versions = [
+ 	'guava':'20.0',
+	'joda':'2.9.6',
+	'junit':'4.12',
+	'hamcrest':'2.0.0.0',
+	'mockito':'2.3.5',
+ 	'servlet':'3.0.1',
+ 	'spring':'4.3.4.RELEASE',
+ 	'mybatis':'3.4.1',
+	'mybatisspring':'1.3.0',
+	'mysql':'5.1.40',
+	'dbcp':'1.4',
+	'logging':'1.2',
+ 	'log4j':'1.2.17'
 ]
+project.ext.set('versions',versions)
 
 def javaProjects() {
-    [project(':crm-admin'), project(':crm-commons'), project(':crm-core'), project(':crm-rest'), project(':crm-webapp')]
+    [project(':crm-admin'), project(':crm-common'), project(':crm-core'), project(':crm-rest'), project(':crm-webapp')]
 }
 
 def publishedProjects() {

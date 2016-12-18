@@ -7,17 +7,17 @@ jar {
 
 dependencies {
     compile(project(':crm-common'),
-			'org.springframework:spring-core:${versions.spring}',
-			'org.springframework:spring-bean:${versions.spring}',
-			'org.springframework:spring-aop:${versions.spring}',
-			'org.springframework:spring-expression:${versions.spring}',
-			'org.springframework:spring-context:${versions.spring}',
-			'org.springframework:spring-oxm:${versions.spring}',
-			'org.springframework:spring-tx:${versions.spring}',
-			'org.springframework:spring-jdbc:${versions.spring}',
-			'org.mybatis:mybatis:${versions.mybatis}',
-			'org.mybatis:mybatis-spring:${versions.mybatis-spring}',
-			'mysql:mysql-connector-java:${versions.mysql}',
-			'commons-dbcp:commons-dbcp:${versions.commons-dbcp}'
-    testCompile('org.springframework:spring-test:${versions.spring}')
+			"org.springframework:spring-core:$project.versions.spring",
+			"org.springframework:spring-beans:$project.versions.spring",
+			"org.springframework:spring-aop:$project.versions.spring",
+			"org.springframework:spring-expression:$project.versions.spring",
+			"org.springframework:spring-context:$project.versions.spring",
+			"org.springframework:spring-oxm:$project.versions.spring",
+			"org.springframework:spring-tx:$project.versions.spring",
+			"org.springframework:spring-jdbc:$project.versions.spring",
+			"org.mybatis:mybatis:$project.versions.mybatis",
+			"org.mybatis:mybatis-spring:$project.versions.mybatisspring",
+			"mysql:mysql-connector-java:$project.versions.mysql",
+			"commons-dbcp:commons-dbcp:$project.versions.dbcp")
+    testCompile("org.springframework:spring-test:$project.versions.spring")
 }

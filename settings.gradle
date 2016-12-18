@@ -1,9 +1,9 @@
 include ':crm-admin'
-include 'crm-common'
+include ':crm-common'
 include ':crm-core'
 include ':crm-distro'
-include 'crm-rest'
-include 'crm-webapp'
+include ':crm-rest'
+include ':crm-webapp'
 
 rootProject.name = 'IT-CRM'
 
