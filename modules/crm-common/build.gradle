@@ -1,0 +1,16 @@
+apply plugin: 'eclipse'
+
+jar {
+    baseName = 'crm-common'
+    version =  '1.0.0'
+}
+
+dependencies {
+    compile('com.google.guava:guava:${versions.guava}',
+			'joda-time:joda-time:${versions.joda-time}',
+			'commons-logging:commons-logging:${versions.commons-logging}',
+			'log4j:log4j:${versions.log4j}'
+    testCompile('junit:junit:${versions.junit}',
+				'org.hamcrest:java-hamcrest:${versions.hamcrest}',
+				'org.mockito:mockito-core:${versions.mockito}')
+}
